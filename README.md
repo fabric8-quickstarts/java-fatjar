@@ -1,6 +1,6 @@
-# Java Simple Fat-jar QuickStart
+# Fat-jar QuickStart
 
-This quickstart run in a Java standalone container using the fat-jar style.
+This quickstart runs a Java application using the fat-jar style on Kubernetes or OpenShift.
 
 This example is implemented using very simple Java code.
 The source code is provided in the following java file `src/main/java/io/fabric8/quickstarts/java/simple/fatjar/Main.java`,
@@ -23,29 +23,28 @@ The example can be run locally using the following Maven goal:
     mvn exec:java
 
 
-### Running the example in fabric8
+### Running the example on Kubernetes or OPenShift
 
 It is assumed a running Kubernetes platform is already running. If not you can find details how to [get started](http://fabric8.io/guide/getStarted/index.html).
 
-The example can be built and deployed using a single goal:
+    mvn fabric8:run
+    
+To list all the running pods in Kubernetes type:
 
-    mvn -Pf8-local-deploy
+    kubetl get pods
 
-When the example runs in fabric8, you can use the OpenShift client tool to inspect the status
-
-To list all the running pods:
+Or on OpenShift type:
 
     oc get pods
 
 Then find the name of the pod that runs this quickstart, and output the logs from the running pods with:
 
-    oc logs <name of pod>
+    kubectl logs <name of pod>
 
-You can also use the fabric8 [web console](http://fabric8.io/guide/console.html) to manage the
-running pods, and view logs and much more.
+You can also use the fabric8 [web console](http://fabric8.io/guide/console.html) to manage the running pods, and view logs and much more.
 
 
 ### More details
 
-You can find more details about running this [quickstart](http://fabric8.io/guide/quickstarts/running.html) on the website. This also includes instructions how to change the Docker image user and registry.
+You can find more details about running this [quickstart](http://fabric8.io/guide/quickstarts/running.html) on the website.
 
