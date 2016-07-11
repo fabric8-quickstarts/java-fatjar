@@ -11,7 +11,7 @@ This example is printing *Hello Fabric8! Here's your random string: lRaNR* to th
 
 ### Building
 
-Navigate to the $IPAAS_QUICKSTART/quickstart/java/simple-fatjar/ folder and the example can be built with
+Navigate to the `java-fatjar' folder and the example can be built with
 
     mvn clean install
 
