@@ -1,5 +1,5 @@
 /**
- *  Copyright 2005-2015 Red Hat, Inc.
+ *  Copyright 2005-2016 Red Hat, Inc.
  *
  *  Red Hat licenses this file to you under the Apache License, version
  *  2.0 (the "License"); you may not use this file except in compliance
@@ -24,7 +24,7 @@ import static org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        while(true) {
+        while (true) {
             System.out.println("Hello Fabric8! Here's your random string: " + randomAlphanumeric(5));
             SECONDS.sleep(1);
         }
