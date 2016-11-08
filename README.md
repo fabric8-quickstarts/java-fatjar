@@ -3,8 +3,6 @@
 This quickstart runs a Java application using the fat-jar style on Kubernetes or OpenShift.
 
 This example is implemented using very simple Java code.
-The source code is provided in the following java file `src/main/java/io/fabric8/quickstarts/java/simple/fatjar/Main.java`,
-which can be viewed from [github](https://github.com/fabric8io/ipaas-quickstarts/blob/master/quickstart/java/simple-fatjar/src/main/java/io/fabric8/quickstarts/java/simple/fatjar/Main.java).
 
 This example is printing *Hello Fabric8! Here's your random string: lRaNR* to the standard output in the infinite loop.
 
@@ -21,7 +19,6 @@ Navigate to the `java-fatjar' folder and the example can be built with
 The example can be run locally using the following Maven goal:
 
     mvn exec:java
-
 
 ### Running the example on Kubernetes or OPenShift
 

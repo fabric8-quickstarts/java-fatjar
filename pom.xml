@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-     Copyright 2005-2015 Red Hat, Inc.
+     Copyright 2005-2016 Red Hat, Inc.
 
      Red Hat licenses this file to you under the Apache License, version
      2.0 (the "License"); you may not use this file except in compliance
@@ -32,8 +32,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- configure the versions you want to use here -->
-    <commons-lang3.version>3.4</commons-lang3.version>
     <fabric8.version>2.2.176</fabric8.version>
+    <slf4j-version>1.7.12</slf4j-version>
+    <log4j.version>1.2.17</log4j.version>
 
     <!-- maven plugin versions -->
     <fabric8.maven.plugin.version>3.1.92</fabric8.maven.plugin.version>
@@ -59,15 +60,27 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
-      <version>${commons-lang3.version}</version>
+      <version>3.4</version>
     </dependency>
+
+    <!-- logging -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>${slf4j-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
   </dependencies>
 
   <build>
     <defaultGoal>install</defaultGoal>
 
     <plugins>
-      <!-- Compiler plugin enforces Java 1.7 compatibility and activates annotation processors -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${maven-compiler-plugin.version}</version>
@@ -77,6 +90,7 @@
         </configuration>
       </plugin>
 
+      <!-- shade plugin to build a fat jar -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
