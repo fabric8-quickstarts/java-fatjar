@@ -32,7 +32,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <!-- configure the versions you want to use here -->
-    <fabric8.version>2.2.178</fabric8.version>
+    <fabric8.version>2.2.179</fabric8.version>
     <slf4j-version>1.7.12</slf4j-version>
     <log4j.version>1.2.17</log4j.version>
 
